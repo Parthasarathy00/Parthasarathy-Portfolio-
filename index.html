@@ -4,204 +4,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parthasarathy S - Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        * {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            cursor: none;
+            background-color: #f4f4f9;
         }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80');
-            color: #fff;
-            overflow-x: hidden;
-        }
-
-        .cursor {
-            width: 20px;
-            height: 20px;
-            border: 2px solid #00ff88;
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            transition: all 0.3s ease;
-            z-index: 999;
-        }
-
-        .cursor-trail {
-            width: 10px;
-            height: 10px;
-            background: #00ff88;
-            position: fixed;
-            pointer-events: none;
-            border-radius: 50%;
-            mix-blend-mode: difference;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .header {
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
             text-align: center;
-            padding: 4rem 0;
-            animation: fadeIn 1.5s;
         }
-
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            border: 4px solid #00ff88;
-            margin-bottom: 1rem;
-            object-fit: cover;
+        h1, h2 {
+            color: white;
         }
-
-        .section {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            margin: 2rem 0;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            transform: translateY(20px);
-            opacity: 0;
-            animation: slideUp 0.8s forwards;
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin: 1rem 0;
-        }
-
-        .contact-info a {
-            color: #00ff88;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .contact-info a:hover {
-            transform: translateY(-3px);
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #00ff88;
-        }
-
         h2 {
-            color: #00ff88;
-            margin-bottom: 1rem;
+            color: #2c3e50;
         }
-
-        .skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
+        ul {
+            list-style: none;
+            padding: 0;
         }
-
-        .project-card {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 1rem;
-            border-radius: 10px;
-            margin: 1rem 0;
+        li {
+            margin-bottom: 10px;
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        a {
+            color: #3498db;
+            text-decoration: none;
         }
-
-        @keyframes slideUp {
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            position: relative;
+            margin-top: 20px;
         }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-            
-            .header {
-                padding: 2rem 0;
-            }
+        .profile-photo {
+            display: block;
+            margin: 20px auto;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 3px solid #e67e22;
+        }
+        .contact-form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="cursor"></div>
-    <div class="cursor-trail"></div>
+    <header>
+        <img src="profile-photo.JPG" alt="Parthasarathy S" class="profile-photo">
+        <h1>Parthasarathy S</h1>
+        <p>Software Developer</p>
+    </header>
 
-    <div class="container">
-        <header class="header">
-            <img src="your-profile-image.jpg" alt="Parthasarathy S" class="profile-img">
-            <h1>Parthasarathy S</h1>
-            <div class="contact-info">
-                <a href="mailto:parthasarathy8248@gmail.com"><i class="fas fa-envelope"></i> parthasarathy8248@gmail.com</a>
-                <a href="tel:8248139386"><i class="fas fa-phone"></i> 8248139386</a>
-                <a href="https://linkedin.com/in/parthasarathy-sampath-6108102b0" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://github.com/Parthasarathy00" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-        </header>
+    <section>
+        <h2>Career Objective</h2>
+        <p>To learn new technologies and work in a challenging organization that utilizes my skills for growth.</p>
+    </section>
 
-        <!-- Add remaining sections following the same pattern -->
-        <section class="section">
-            <h2>Career Objective</h2>
-            <p>Enthusiastic and detail-oriented Software Engineer with a strong foundation in programming and web development...</p>
-        </section>
+    <section>
+        <h2>Education</h2>
+        <ul>
+            <li><strong>B.E. Computer Science</strong> - R.P. Sarathy Institute of Technology, Anna University (2021-2025) - GPA: 7.26</li>
+            <li><strong>H.S.C</strong> - Lotus Matric. Hr. Sec. School (2020-2021) - 75.7%</li>
+            <li><strong>S.S.L.C</strong> - Lotus Matric. Hr. Sec. School (2018-2019) - 66.4%</li>
+        </ul>
+    </section>
 
-        <!-- Add Education, Technical Skills, Projects, etc., sections here -->
-        
-    </div>
+    <section>
+        <h2>Technical Skills</h2>
+        <ul>
+            <li>Programming: C, Java, Python</li>
+            <li>Web Development: HTML, CSS, JavaScript</li>
+            <li>Databases: MongoDB, SQL</li>
+            <li>Frameworks: PHP</li>
+            <li>Soft Skills: Decision-making, Flexibility</li>
+        </ul>
+    </section>
 
-    <script>
-        // Custom cursor animation
-        const cursor = document.querySelector('.cursor');
-        const cursorTrail = document.querySelector('.cursor-trail');
+    <section>
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Billing System for Grocery Shop</strong> - A retail transaction software using Python & Tkinter.</li>
+            <li><strong>Chatbot for Restaurant</strong> - Interactive ordering tool with input validation.</li>
+            <li><strong>E-Commerce Website</strong> - Online shopping platform with secure payments.</li>
+        </ul>
+    </section>
 
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
+    <section>
+        <h2>Certifications</h2>
+        <ul>
+            <li>Programming in C - Odugaa Tech</li>
+            <li>Full-stack Development - Great Learning</li>
+            <li>Python - Imagecon Academy</li>
+            <li>Java - Optimus Technocrats Pvt. Ltd</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <p>If you have any questions or want to collaborate, feel free to contact me.</p>
+        <form class="contact-form" action="submit_contact.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
             
-            setTimeout(() => {
-                cursorTrail.style.left = e.clientX + 'px';
-                cursorTrail.style.top = e.clientY + 'px';
-            }, 50);
-        });
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <input type="submit" value="Send">
+        </form>
+    </section>
 
-        // Add hover effects
-        document.querySelectorAll('a, button').forEach(element => {
-            element.addEventListener('mouseenter', () => {
-                cursor.style.transform = 'scale(1.5)';
-                cursorTrail.style.transform = 'scale(2)';
-            });
-            element.addEventListener('mouseleave', () => {
-                cursor.style.transform = 'scale(1)';
-                cursorTrail.style.transform = 'scale(1)';
-            });
-        });
-
-        // Section animations on scroll
-        const sections = document.querySelectorAll('.section');
-        window.addEventListener('scroll', () => {
-            sections.forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
-                if(sectionTop < window.innerHeight - 100) {
-                    section.style.opacity = '1';
-                    section.style.transform = 'translateY(0)';
-                }
-            });
-        });
-    </script>
+    <footer>
+        &copy; 2025 Parthasarathy S | <a href="admin.php">Admin Panel</a>
+    </footer>
 </body>
 </html>
