@@ -3,83 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parthasarathy | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>Parthasarathy S - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: none;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80');
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #00ff88;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .cursor-trail {
+            width: 10px;
+            height: 10px;
+            background: #00ff88;
+            position: fixed;
+            pointer-events: none;
+            border-radius: 50%;
+            mix-blend-mode: difference;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            padding: 4rem 0;
+            animation: fadeIn 1.5s;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid #00ff88;
+            margin-bottom: 1rem;
+            object-fit: cover;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transform: translateY(20px);
+            opacity: 0;
+            animation: slideUp 0.8s forwards;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+
+        .contact-info a {
+            color: #00ff88;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .contact-info a:hover {
+            transform: translateY(-3px);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #00ff88;
+        }
+
+        h2 {
+            color: #00ff88;
+            margin-bottom: 1rem;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .project-card {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .header {
+                padding: 2rem 0;
+            }
+        }
+    </style>
 </head>
 <body>
-
-    <!-- Custom Cursor -->
     <div class="cursor"></div>
+    <div class="cursor-trail"></div>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="logo">P</div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <header class="header">
+            <img src="your-profile-image.jpg" alt="Parthasarathy S" class="profile-img">
+            <h1>Parthasarathy S</h1>
+            <div class="contact-info">
+                <a href="mailto:parthasarathy8248@gmail.com"><i class="fas fa-envelope"></i> parthasarathy8248@gmail.com</a>
+                <a href="tel:8248139386"><i class="fas fa-phone"></i> 8248139386</a>
+                <a href="https://linkedin.com/in/parthasarathy-sampath-6108102b0" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/Parthasarathy00" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="fade-in">Hello, I'm <span class="highlight">Parthasarathy</span></h1>
-            <p class="fade-in">A Full Stack Developer & Cybersecurity Enthusiast</p>
-            <a href="#projects" class="btn fade-in">View My Work</a>
-        </div>
-    </section>
+        <!-- Add remaining sections following the same pattern -->
+        <section class="section">
+            <h2>Career Objective</h2>
+            <p>Enthusiastic and detail-oriented Software Engineer with a strong foundation in programming and web development...</p>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="fade-in">
-        <h2>About Me</h2>
-        <p>I specialize in Web Development, Java, Python, and Cybersecurity. Passionate about building secure and scalable applications.</p>
-    </section>
+        <!-- Add Education, Technical Skills, Projects, etc., sections here -->
+        
+    </div>
 
-    <!-- Skills Section -->
-    <section id="skills" class="fade-in">
-        <h2>My Skills</h2>
-        <ul>
-            <li>✅ HTML, CSS, JavaScript (Frontend Development)</li>
-            <li>✅ React.js & Node.js</li>
-            <li>✅ Python, Java, C</li>
-            <li>✅ Cybersecurity & Network Security</li>
-            <li>✅ MongoDB, SQL (Database Management)</li>
-        </ul>
-    </section>
+    <script>
+        // Custom cursor animation
+        const cursor = document.querySelector('.cursor');
+        const cursorTrail = document.querySelector('.cursor-trail');
 
-    <!-- Projects Section -->
-    <section id="projects" class="fade-in">
-        <h2>Projects</h2>
-        <div class="project-card">
-            <h3>CyberShield</h3>
-            <p>AI-powered cybersecurity solution for detecting threats.</p>
-        </div>
-        <div class="project-card">
-            <h3>E-Commerce Website</h3>
-            <p>Full-stack online shopping platform with payment integration.</p>
-        </div>
-        <div class="project-card">
-            <h3>Billing System</h3>
-            <p>Automated billing software for retail businesses.</p>
-        </div>
-    </section>
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            
+            setTimeout(() => {
+                cursorTrail.style.left = e.clientX + 'px';
+                cursorTrail.style.top = e.clientY + 'px';
+            }, 50);
+        });
 
-    <!-- Contact Section -->
-    <section id="contact" class="fade-in">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:parthasarathy8248@gmail.com">parthasarathy8248@gmail.com</a></p>
-        <p>Phone: 8248139386</p>
-    </section>
+        // Add hover effects
+        document.querySelectorAll('a, button').forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'scale(1.5)';
+                cursorTrail.style.transform = 'scale(2)';
+            });
+            element.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'scale(1)';
+                cursorTrail.style.transform = 'scale(1)';
+            });
+        });
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Parthasarathy | All Rights Reserved</p>
-    </footer>
-
-    <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        // Section animations on scroll
+        const sections = document.querySelectorAll('.section');
+        window.addEventListener('scroll', () => {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if(sectionTop < window.innerHeight - 100) {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
